@@ -1,0 +1,12 @@
+{
+  "name": "flickr2",
+  "version": "1.0.0",
+  "description": "show flickr images",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Nicholas Kneafsey",
+  "license": "ISC"
+}
