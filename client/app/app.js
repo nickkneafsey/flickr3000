@@ -1,7 +1,7 @@
 angular.module('potato', [
-  'ngRoute',
   'potato.services',
-  'potato.photos'
+  'potato.photos',
+  'ngRoute'
   // 'ng',
   // 'ngResource',
   
