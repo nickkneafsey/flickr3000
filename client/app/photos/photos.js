@@ -1,22 +1,27 @@
 angular.module('potato.photos', [])
-
-.controller('PhotosController', function ($scope, Photos) {
-
+// angular.module('potato')
+.controller('PhotosController', function ($scope, $location, Photos) {
 
   $scope.data = {};
 
   var initializePhotos = function () {
     Photos.getPhotos()
       .then(function (photos) {
-        console.log(photos)
-        // $scope.data.photos = photos;
+        $scope.data.photos = photos;
       })
       .catch(function (error) {
         console.error(error);
       });
-    // $scope.data.photos = [1,2,3];
   };
 
+  $scope.changeSelection = function (selection) {
+    Photos.setSelected(selection);
+    $location.path('photo');
+  }
+  // $scope.consoleSelected = function() {
+  //   console.log($scope.selected);
+  // }
+  
   initializePhotos();
 });
 

@@ -1,0 +1,11 @@
+.photo {
+  width: 100%;
+  border:2px;
+  border-color: black;
+}
+.pic {
+  display: inline-block;
+}
+.words {
+  display: inline-block;
+}

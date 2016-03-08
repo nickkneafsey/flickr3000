@@ -1,10 +1,8 @@
 angular.module('potato', [
   'potato.services',
   'potato.photos',
+  'potato.singlePhoto',
   'ngRoute'
-  // 'ng',
-  // 'ngResource',
-  
 ])
 .config(function ($routeProvider, $httpProvider) {
   $routeProvider
@@ -12,8 +10,12 @@ angular.module('potato', [
       templateUrl: 'app/photos/photos.html',
       controller: 'PhotosController'
     })
+    .when('/photo', {
+      templateUrl: 'app/singlePhoto/singlePhoto.html',
+      controller: 'PhotoController'
+    })
     .otherwise({
       redirectTo: '/photos'
     });
     
-})
+});
