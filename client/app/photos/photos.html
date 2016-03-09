@@ -8,9 +8,9 @@
       <div class="pic"><img src={{photo.media.m}} /></div>
       <div class="words">
         <h2 ng-click="changeSelection(photo)">{{photo.title}}</h2>
-        <a href={{photo.link.split('/').slice(0,5).join('/')}}>Post Author</a>
+        Published {{photo.published | date:"EEEE, MMMM d, y 'at' h:mm:ss a"}} 
+        <a href={{photo.link.split('/').slice(0,5).join('/')}}>Post Author</a> 
         <a href={{photo.link}}>View on Flickr</a>
-        <p>Published {{photo.published}}</p>
       </div>
   </div>
 </div>

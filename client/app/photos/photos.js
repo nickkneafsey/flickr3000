@@ -1,5 +1,4 @@
 angular.module('potato.photos', [])
-// angular.module('potato')
 .controller('PhotosController', function ($scope, $location, Photos) {
 
   $scope.data = {};
@@ -18,9 +17,6 @@ angular.module('potato.photos', [])
     Photos.setSelected(selection);
     $location.path('photo');
   }
-  // $scope.consoleSelected = function() {
-  //   console.log($scope.selected);
-  // }
   
   initializePhotos();
 });

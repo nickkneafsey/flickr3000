@@ -3,7 +3,23 @@
 </div>
 
 <div ng-model="selected">
-  {{selected}}
-  <p ng-click="consoleSelected()">hi</p>
-  yo
+  <div class="topBox">
+    <h2>
+      <a href={{selected.link}}>{{selected.title}}</a>
+    </h2>
+    <span>
+      <a href={{selected.link.split('/').slice(0,5).join('/')}}>Photo Author</a> | Published: {{selected.published}}
+    </span>
+  </div>
+  <div class="box">
+    <div class="pic">
+      <img src={{selected.media.m}} />
+    </div>
+    <div class="words">
+      <p>The potato is a starchy, tuberous crop from the perennial nightshade Solanum tuberosum L. The word "potato" may refer either to the plant itself or to the edible tuber. In the Andes, where the species is indigenous, there are some other closely related cultivated potato species. Potatoes were introduced outside the Andes region approximately four centuries ago, and have since become an integral part of much of the world's food supply. It is the world's fourth-largest food crop, following maize, wheat, and rice. The green leaves and green skins of tubers exposed to the light are toxic.</p><p>Wild potato species can be found throughout the Americas from the United States to southern Chile. The potato was originally believed to have been domesticated independently in multiple locations, but later genetic testing of the wide variety of cultivars and wild species proved a single origin for potatoes in the area of present-day southern Peru and extreme northwestern Bolivia (from a species in the Solanum brevicaule complex), where they were domesticated approximately 7,000–10,000 years ago.Following centuries of selective breeding, there are now over a thousand different types of potatoes. Over 99% of the presently cultivated potatoes worldwide descended from varieties that originated in the lowlands of south-central Chile, which have displaced formerly popular varieties from the Andes.</p>Tags: <span ng-repeat="tag in tags">
+        <a href="https://www.flickr.com/search/?tags={{tag}}" >{{ tag }}</a>  
+      </span>
+
+    </div>
+  </div>
 </div>
